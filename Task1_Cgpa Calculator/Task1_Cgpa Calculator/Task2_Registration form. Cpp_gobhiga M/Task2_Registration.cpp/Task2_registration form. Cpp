@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name, email, phone, gender, password, confirmPassword;
+
+    cout << "--------- Registration Form ---------\n\n";
+
+    cout << "Enter Full Name: ";
+    getline(cin, name);
+
+    cout << "Enter Email: ";
+    getline(cin, email);
+
+    cout << "Enter Phone Number: ";
+    getline(cin, phone);
+
+    cout << "Enter Gender (Male/Female/Other): ";
+    getline(cin, gender);
+
+    cout << "Create Password: ";
+    getline(cin, password);
+
+    cout << "Confirm Password: ";
+    getline(cin, confirmPassword);
+
+    if (password == confirmPassword) {
+        cout << "\nRegistration Successful!\n";
+        cout << "------------------------------------\n";
+        cout << "Name: " << name << endl;
+        cout << "Email: " << email << endl;
+        cout << "Phone: " << phone << endl;
+        cout << "Gender: " << gender << endl;
+    } else {
+        cout << "\nError: Passwords do not match. Please try again.\n";
+    }
+
+    cout << "\n-------------------------------------\n";
+
+    return 0;
+}
+Output
+--------- Registration Form ---------
+
+Enter Full Name: Gobhiga M
+Enter Email: gobhiga123@gmail.com
+Enter Phone Number: 9876543210
+Enter Gender (Male/Female/Other): Female
+Create Password: pass123
+Confirm Password: pass123
+
+Registration Successful!
+------------------------------------
+Name: Gobhiga M
+Email: gobhiga123@gmail.com
+Phone: 9876543210
+Gender: Female
+
+-------------------------------------
